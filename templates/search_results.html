@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html>
+<head><title>Search</title></head>
+<body>
+<h2>Results for "{{ query }}"</h2>
+{% for book in results %}
+    <div>
+        <h3>{{ book.title }}</h3>
+        <p>{{ book.author }} - ₹{{ book.price }}</p>
+    </div>
+{% else %}
+    <p>No results found.</p>
+{% endfor %}
+</body>
+</html>
